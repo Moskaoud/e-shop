@@ -1,0 +1,187 @@
+<div class="container">
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#">
+      <img src="assets/e-shop.png" width="50" style="margin: 15px;">
+      <span style="color:#fbb03b">E-</span>Shop
+    </a>
+
+    <i class="bi bi-search align-middle ml-auto mr-4 order-lg-last navbar-light "></i>
+    <i class="bi bi-cart3  align-middle mr-4 order-lg-last"></i>
+    <i class="bi bi-person  align-middle mr-4 order-lg-last"></i>
+
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse"
+      data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" [attr.aria-expanded]="!isCollapsed"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center " id="navbarTogglerDemo02" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav  ">
+        <li class="nav-item active ">
+          <a class="nav-link" href="#">Men </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kids</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">
+          <i class="bi bi-house-door"></i>
+        </a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">All Products</li>
+    </ol>
+  </nav>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3">      
+      
+      <div class="row">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn dropdown-toggle" data-toggle="collapse"  (click)="isCollapsedProductType = !isCollapsedProductType" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  PRODUCT TYPE
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show " [ngbCollapse]="isCollapsedProductType" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+              <ul>
+                <li class="dropdown-item">
+                  <input class="form-check-input" type="checkbox" value="" id="t-shirt">
+                  <label class="form-check-label" for="t-shirt">
+                    T-Shirts
+                  </label>
+                </li>
+                <li class="dropdown-item">
+                  <input class="form-check-input" type="checkbox" value="" id="sweatshirt">
+                  <label class="form-check-label" for="sweatshirt">
+                    Sweatshirts
+                  </label>
+                </li>
+                <li class="dropdown-item">
+                  <input class="form-check-input" type="checkbox" value="" id="tank">
+                  <label class="form-check-label" for="tank">
+                    Tank Tops
+                  </label>
+                </li>
+                <li class="dropdown-item">
+                  <input class="form-check-input" type="checkbox" value="" id="dress">
+                  <label class="form-check-label" for="dress">
+                    Dress shirts
+                  </label>
+                </li>
+      
+              </ul>      
+              </div>
+            </div>
+          </div>                    
+        </div>
+      </div>  
+      <div class="row">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn dropdown-toggle" data-toggle="collapse"  (click)="isCollapsedPrice = !isCollapsedPrice" data-target="#price" aria-expanded="true" aria-controls="collapseOne">
+                  PRICE
+                </button>
+              </h5>
+            </div>
+        
+            <div id="price" class="collapse show " [ngbCollapse]="isCollapsedPrice" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <label class="form-label" for="customRange1">
+                  <div class="badge text-dark"> US</div>
+                </label>
+                <div class="range">
+                  <input type="range" class="form-range" id="customRange1" />
+                </div>
+              </div>
+            </div>
+          </div>                    
+        </div>
+      </div>
+      <div class="row">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn dropdown-toggle" data-toggle="collapse"  (click)="isCollapsedCollection = !isCollapsedCollection" data-target="#collection" aria-expanded="true" aria-controls="collapseOne">
+                  COLLECTION
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collection" class="collapse show " [ngbCollapse]="isCollapsedCollection" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                
+              </div>
+            </div>
+          </div>                    
+        </div>
+      </div>
+      <div class="row">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn dropdown-toggle" data-toggle="collapse"  (click)="isCollapsedSize = !isCollapsedSize" data-target="#size" aria-expanded="true" aria-controls="collapseOne">
+                  SIZE
+                </button>
+              </h5>
+            </div>
+        
+            <div id="size" class="collapse show " [ngbCollapse]="isCollapsedSize" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                
+              </div>
+            </div>
+          </div>                    
+        </div>
+      </div>
+      <div class="row">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn dropdown-toggle" data-toggle="collapse"  (click)="isCollapsedColor = !isCollapsedColor" data-target="#color" aria-expanded="true" aria-controls="collapseOne">
+                  COLOR
+                </button>
+              </h5>
+            </div>
+        
+            <div id="color" class="collapse show " [ngbCollapse]="isCollapsedColor" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+               
+              </div>
+            </div>
+          </div>                    
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-9">
+      
+      <app-products></app-products>
+    </div>
+  </div>
+
+</div>
+<router-outlet></router-outlet>
